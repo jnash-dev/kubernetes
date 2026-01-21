@@ -1,5 +1,9 @@
 name: Check Kubernetes YAMLs with kube-linter
 
+permissions:
+  contents: read # Required for checking out code
+  security-events: write # Required for uploading CodeQL results
+
 on:
   # Note that both `push` and `pull_request` triggers should be present for GitHub to consistently present kube-linter
   # SARIF reports.
